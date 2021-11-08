@@ -1,0 +1,148 @@
+testname: webMUSHRA
+testId: default_example
+bufferSize: 2048
+stopOnErrors: true
+showButtonPreviousPage: true
+remoteService: service/write.php
+
+
+pages:
+    - type: generic
+      id: first_page
+      name: Welcome
+      content: Welcome to webMUSHRA!       
+    - type: mushra
+      id: trial1
+      name: MUSHRA
+      content: Thank you for attending MUSHRA test, please rate the overall quality of different utterances. Test number 01.
+      showWaveform: true
+      enableLooping: true 
+      reference: configs/resources/audio/ambient_j_demo_-5_clean.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/ambient_j_demo_-5_mkf.wav
+          C2: configs/resources/audio/ambient_j_demo_-5_mvdr.wav
+          C3: configs/resources/audio/ambient_j_demo_-5_noisy.wav
+          C4: configs/resources/audio/ambient_j_demo_-5_mwf.wav
+    - 
+          # - random
+          - type: mushra
+            id: trial_2
+            name: MUSHRA - Random
+            content: Thank you for attending MUSHRA test, please rate the overall quality of different utterances. Test number 02.
+            enableLooping: true 
+            reference: configs/resources/audio/ambient_j_demo_5_clean.wav
+            createAnchor35: false
+            createAnchor70: false
+            stimuli:
+                C1: configs/resources/audio/ambient_j_demo_5_mkf.wav
+                C2: configs/resources/audio/ambient_j_demo_5_mvdr.wav
+                C3: configs/resources/audio/ambient_j_demo_5_noisy.wav
+                C4: configs/resources/audio/ambient_j_demo_5_mwf.wav          
+          - type: mushra
+            id: trial_3
+            name: MUSHRA - Random 1
+            content: Thank you for attending MUSHRA test, please rate the overall quality of different utterances. Test number 03.
+            enableLooping: true 
+            reference: configs/resources/audio/ambient_j_demo_5f_clean.wav
+            createAnchor35: false
+            createAnchor70: false
+            stimuli:
+                C1: configs/resources/audio/ambient_j_demo_5f_mkf.wav
+                C2: configs/resources/audio/ambient_j_demo_5f_mvdr.wav
+                C3: configs/resources/audio/ambient_j_demo_5f_noisy.wav
+                C4: configs/resources/audio/ambient_j_demo_5f_mwf.wav          
+          - type: mushra
+            id: trial_4
+            name: MUSHRA - Random 1
+            content: Thank you for attending MUSHRA test, please rate the overall quality of different utterances. Test number 04.
+            enableLooping: true 
+            reference: configs/resources/audio/ambient_j_demo_-5f_clean.wav
+            createAnchor35: false
+            createAnchor70: false
+            stimuli:
+                C1: configs/resources/audio/ambient_j_demo_-5f_mkf.wav
+                C2: configs/resources/audio/ambient_j_demo_-5f_mvdr.wav
+                C3: configs/resources/audio/ambient_j_demo_-5f_noisy.wav
+                C4: configs/resources/audio/ambient_j_demo_-5f_mwf.wav          
+
+          #----------------------
+
+          - type: mushra
+            id: trial_5
+            name: MUSHRA - Random
+            content: Thank you for attending MUSHRA test, please rate the overall quality of different utterances. Test number 05.
+            enableLooping: true 
+            reference: configs/resources/audio/babble_j_demo_5_clean.wav
+            createAnchor35: false
+            createAnchor70: false
+            stimuli:
+                C1: configs/resources/audio/babble_j_demo_5_mkf.wav
+                C2: configs/resources/audio/babble_j_demo_5_mvdr.wav
+                C3: configs/resources/audio/babble_j_demo_5_noisy.wav
+                C4: configs/resources/audio/babble_j_demo_5_mwf.wav          
+          - type: mushra
+            id: trial_6
+            name: MUSHRA - Random 1
+            content: Thank you for attending MUSHRA test, please rate the overall quality of different utterances. Test number 06.
+            enableLooping: true 
+            reference: configs/resources/audio/babble_j_demo_5f_clean.wav
+            createAnchor35: false
+            createAnchor70: false
+            stimuli:
+                C1: configs/resources/audio/babble_j_demo_5f_mkf.wav
+                C2: configs/resources/audio/babble_j_demo_5f_mvdr.wav
+                C3: configs/resources/audio/babble_j_demo_5f_noisy.wav
+                C4: configs/resources/audio/babble_j_demo_5f_mwf.wav          
+          - type: mushra
+            id: trial_7
+            name: MUSHRA - Random 1
+            content: Thank you for attending MUSHRA test, please rate the overall quality of different utterances. Test number 07.
+            enableLooping: true 
+            reference: configs/resources/audio/babble_j_demo_-5f_clean.wav
+            createAnchor35: false
+            createAnchor70: false
+            stimuli:
+                C1: configs/resources/audio/babble_j_demo_-5f_mkf.wav
+                C2: configs/resources/audio/babble_j_demo_-5f_mvdr.wav
+                C3: configs/resources/audio/babble_j_demo_-5f_noisy.wav
+                C4: configs/resources/audio/babble_j_demo_-5f_mwf.wav          
+          - type: mushra
+            id: trial_8
+            name: MUSHRA - Random 1
+            content: Thank you for attending MUSHRA test, please rate the overall quality of different utterances. Test number 08.
+            enableLooping: true 
+            reference: configs/resources/audio/babble_j_demo_-5_clean.wav
+            createAnchor35: false
+            createAnchor70: false
+            stimuli:
+                C1: configs/resources/audio/babble_j_demo_-5_mkf.wav
+                C2: configs/resources/audio/babble_j_demo_-5_mvdr.wav
+                C3: configs/resources/audio/babble_j_demo_-5_noisy.wav
+                C4: configs/resources/audio/babble_j_demo_-5_mwf.wav          
+    - type: finish
+      name: Thank you
+      content: Thank you for attending!
+      showResults: true
+      writeResults: true
+      questionnaire:
+          - type: text
+            label: AnonymousID
+            name: AnonymousID
+          # - type: number
+          #   label: Age
+          #   name: age
+          #   min: 0
+          #   max: 100
+          #   default: 30
+          # - type: likert
+          #   name: gender
+          #   label: Gender
+          #   response:
+          #    - value: female
+          #      label: Female
+          #    - value: male
+          #      label: Male
+          #    - value: other
+          #      label: Other
